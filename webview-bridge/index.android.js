@@ -14,8 +14,9 @@
 'use strict';
 
 var React = require('react');
-var PropTypes = require('prop-types');
 var ReactNative = require('react-native');
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 var invariant = require('invariant');
 var keyMirror = require('keymirror');
 var resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
@@ -67,7 +68,7 @@ var WebViewBridge = React.createClass({
     };
   },
 
-  
+
   componentWillMount: function() {
     DeviceEventEmitter.addListener("webViewBridgeMessage", (body) => {
       const { onBridgeMessage } = this.props;
