@@ -49,7 +49,7 @@ var RCTWebViewBridge = requireNativeComponent('RCTWebViewBridge', WebViewBridge)
 /**
  * Renders a native WebView.
  */
-var WebViewBridge = React.createClass({
+var WebViewBridge = createReactClass({
 
   propTypes: {
     ...RCTWebViewBridge.propTypes,
